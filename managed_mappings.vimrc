@@ -231,15 +231,6 @@ call extend(g:which_key_map, {'6':'Fold until level 6'})
 
 
   " ----------------------------------------------------------------
-  " Prefix Leader > Elixir
-  " Key <leader>l
-  " Filetype: elixir
-  " Elixir mappings
-  " ----------------------------------------------------------------
-  autocmd FileType elixir let g:which_key_map['l'] = { 'name' : '+Leader > Elixir' }
-
-
-  " ----------------------------------------------------------------
   " Prefix Leader > Javascript
   " Key <leader>l
   " Filetype: javascript
@@ -250,24 +241,6 @@ call extend(g:which_key_map, {'6':'Fold until level 6'})
   " Generate docs
   autocmd FileType javascript nmap <leader>ld <Plug>(jsdoc)
   autocmd FileType javascript call extend(g:which_key_map['l'], {'d':'Generate docs'})
-
-
-  " ----------------------------------------------------------------
-  " Prefix Leader > Python
-  " Key <leader>l
-  " Filetype: python
-  " Python mappings
-  " ----------------------------------------------------------------
-  autocmd FileType python let g:which_key_map['l'] = { 'name' : '+Leader > Python' }
-
-
-  " ----------------------------------------------------------------
-  " Prefix Leader > Zsh
-  " Key <leader>l
-  " Filetype: zsh
-  " Terminal prefixes
-  " ----------------------------------------------------------------
-  autocmd FileType zsh let g:which_key_map['l'] = { 'name' : '+Leader > Zsh' }
 
 
 " ----------------------------------------------------------------
@@ -679,6 +652,18 @@ nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impu
 
 " Smooth scrolling
 nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
+
+" Navigate to left window
+nnoremap <silent> <C-h> <C-w>h
+
+" Navigate to bottom window
+nnoremap <silent> <C-j> <C-w>j
+
+" Navigate to above window
+nnoremap <silent> <C-k> <C-w>k
+
+" Navigate to right window
+nnoremap <silent> <C-l> <C-w>l
 
 " Easymotion
 nmap / <Plug>(easymotion-overwin-f2)

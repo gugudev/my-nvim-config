@@ -323,6 +323,12 @@ normal '<silent> <C-u>', ':call comfortable_motion#flick(g:comfortable_motion_im
 normal '<silent> <C-f>', ':call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)', desc: 'Smooth scrolling'
 normal '<silent> <C-b>', ':call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)', desc: 'Smooth scrolling'
 
+# Navigate through opened windows
+normal '<silent> <C-h>', '<C-w>h', desc: 'Navigate to left window'
+normal '<silent> <C-j>', '<C-w>j', desc: 'Navigate to bottom window'
+normal '<silent> <C-k>', '<C-w>k', desc: 'Navigate to above window'
+normal '<silent> <C-l>', '<C-w>l', desc: 'Navigate to right window'
+
 normal '/', '<Plug>(easymotion-overwin-f2)', desc: 'Easymotion', recursively: true
 
 command 'Retab', ':set expandtab | retab', desc: "Replace tabs to specs of the current file"

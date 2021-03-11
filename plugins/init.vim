@@ -35,6 +35,21 @@ call plug#begin()
   Plug 'luochen1990/rainbow'
     let g:rainbow_active = 0
 
+  " Highligh cursor word
+  Plug 'itchyny/vim-cursorword'
+
+  " Highligh empty space and auto remove it
+  Plug 'ntpeters/vim-better-whitespace'
+    let g:better_whitespace_enabled=0
+    let g:strip_whitespace_on_save=0
+
+  " Visual indentation
+  Plug 'Yggdroot/indentLine'
+    let g:indentLine_enabled = 0
+
+  " Nice starup
+  Plug 'mhinz/vim-startify'
+
 " -----------------------------------------------------------------------------
 " Behavior
 " -----------------------------------------------------------------------------
@@ -61,13 +76,27 @@ call plug#begin()
   " Find and Replace
   Plug 'jremmen/vim-ripgrep'
 
-  " Highligh empty space and auto remove it
-  Plug 'ntpeters/vim-better-whitespace'
-    let g:better_whitespace_enabled=0
-    let g:strip_whitespace_on_save=0
-
   " Vim Line no Indicator
   Plug 'drzel/vim-line-no-indicator'
+
+  " Allow repeat to work with plugins
+  Plug 'tpope/vim-repeat'
+
+  " Nice foldings
+  Plug 'tmhedberg/SimpylFold'
+
+  " Navigate and highlight matching words
+  Plug 'andymass/vim-matchup'
+
+  " Lightning fast left-right movement in Vim
+  Plug 'unblevable/quick-scope'
+
+  " Better motion
+  Plug 'justinmk/vim-sneak'
+  let g:sneak#label = 1
+
+  " Fuzzy finder for lines in the current file
+  Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " -----------------------------------------------------------------------------
 " Fuzzy finder
@@ -76,6 +105,7 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   source $HOME/.config/nvim/plugins/fzf.vimrc
 
+  Plug 'alexvko/fzf-to-functions.vim'
 
 " -----------------------------------------------------------------------------
 " Autocomplete and Snippets
