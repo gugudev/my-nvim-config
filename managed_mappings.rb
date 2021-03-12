@@ -19,8 +19,8 @@ leader ' ' do
   normal 'H', "<Plug>(quickhl-manual-reset)", desc: 'Highlight reset', recursively: true
   visual 'H', "<Plug>(quickhl-manual-reset)", desc: 'Highlight reset', recursively: true
 
-  normal 'e', "=ae``", desc: 'Indente file'
-  normal 'a', "=ap``", desc: 'Indente paragraph'#, keep_cursor_position: true
+  normal 'e', "=ae``", desc: 'Indent file'
+  normal 'a', "=ap``", desc: 'Indent paragraph'#, keep_cursor_position: true
 
   normal ',', ':<C-u>silent! keeppatterns %substitute/\s\+$//e', desc: 'Remove empty spaces'
   normal 'o', '<esc>viwp', desc: 'Overwrite word'

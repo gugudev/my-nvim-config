@@ -95,6 +95,9 @@ call plug#begin()
   Plug 'justinmk/vim-sneak'
   let g:sneak#label = 1
 
+  " Find and replace
+  Plug 'brooth/far.vim'
+
   " Fuzzy finder for lines in the current file
   Plug 'ripxorip/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -113,6 +116,18 @@ call plug#begin()
   Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
     let g:coc_global_extensions = ['coc-solargraph']
 
+  Plug 'SirVer/ultisnips'
+    let g:UltiSnipsEditSplit="vertical"
+    let g:UltiSnipsJumpForwardTrigger="<c-n>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+  " ES2015 code snippets
+  Plug 'epilande/vim-es2015-snippets'
+
+  " React code snippets
+  " Plug 'epilande/vim-react-snippets'
+
+  Plug 'honza/vim-snippets'
 
 " -----------------------------------------------------------------------------
 " Sidebar
@@ -124,17 +139,17 @@ call plug#begin()
 " -----------------------------------------------------------------------------
 " Airline
 " -----------------------------------------------------------------------------
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
-    let g:airline_theme = "hybrid"
-    let g:airline_section_a = ''
-    let g:airline_section_b = ''
-    " let g:airline_section_z = '%3p%%/%L'
-    let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
-    " let g:airline_section_x = ''
-    " let g:airline#extensions#tagbar#enabled = 1
-    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+  let g:airline_theme = "hybrid"
+  let g:airline_section_a = ''
+  let g:airline_section_b = ''
+  " let g:airline_section_z = '%3p%%/%L'
+  let g:airline_section_y = '%#__accent_bold#%{LineNoIndicator()}%#__restore__#'
+  " let g:airline_section_x = ''
+  " let g:airline#extensions#tagbar#enabled = 1
+  let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " -----------------------------------------------------------------------------
 " Text Objects
@@ -178,11 +193,7 @@ call plug#begin()
 " -----------------------------------------------------------------------------
   Plug 'Galooshi/vim-import-js'
 
-  " ES2015 code snippets
-  Plug 'epilande/vim-es2015-snippets'
-
-  " React code snippets
-  Plug 'epilande/vim-react-snippets'
+ 
 
   Plug 'heavenshell/vim-jsdoc'
   Plug 'yuezk/vim-js'

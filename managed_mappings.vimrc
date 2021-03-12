@@ -37,13 +37,13 @@ call extend(g:which_key_map, {'H':'Highlight reset'})
 " Highlight reset
 xmap <leader>H <Plug>(quickhl-manual-reset)
 
-" Indente file
+" Indent file
 nnoremap <leader>e =ae``
-call extend(g:which_key_map, {'e':'Indente file'})
+call extend(g:which_key_map, {'e':'Indent file'})
 
-" Indente paragraph
+" Indent paragraph
 nnoremap <leader>a =ap``
-call extend(g:which_key_map, {'a':'Indente paragraph'})
+call extend(g:which_key_map, {'a':'Indent paragraph'})
 
 " Remove empty spaces
 nnoremap <leader>, :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
